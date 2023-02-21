@@ -1,0 +1,36 @@
+<apex:page standardController="NewPateint__c" recordSetVar="NewPateints" >
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection title="New Patient">
+            <apex:inputField value="{!NewPateint__c.Date__c}"/>
+            <apex:inputField value="{!NewPateint__c.Title__c}"/>
+            <apex:inputField value="{!NewPateint__c.Name__c}"/>
+            <apex:inputField value="{!NewPateint__c.Address__c}"/>
+            <apex:inputField value="{!NewPateint__c.Mobile_No__c}"/>
+            <apex:inputField value="{!NewPateint__c.Email_ID__c}"/>
+            <apex:inputField value="{!NewPateint__c.Ref_By__c}"/>
+            <apex:inputField value="{!NewPateint__c.Weight__c}"/>
+            <apex:inputField value="{!NewPateint__c.Consultant_Name__c}"/>
+            <apex:inputField value="{!NewPateint__c.Pateint_Id__c}"/>
+            <apex:inputField value="{!NewPateint__c.Age__c}"/>
+            <apex:inputField value="{!NewPateint__c.Sex__c}"/>
+            <apex:inputField value="{!NewPateint__c.Landline_Number__c}"/>
+            <apex:inputField value="{!NewPateint__c.Occupation__c}"/>
+            <apex:inputField value="{!NewPateint__c.Consultant__c}"/>
+            <apex:inputField value="{!NewPateint__c.Height__c}"/>
+           
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!save}" value="Save"/>
+             </apex:pageBlockButtons>
+        
+        </apex:pageBlock>
+       
+      <apex:pageBlock title="NewPateints List">
+        <apex:pageBlockTable value="{!NewPateints}" var="NWPT" cellpadding="4" border="1">
+            <apex:column value="{!NWPT.Name__c}"/>
+            <apex:column value="{!NWPT.Consultant__c}"/>
+        </apex:pageBlockTable>
+       </apex:pageBlock>     
+    </apex:form>
+</apex:page>

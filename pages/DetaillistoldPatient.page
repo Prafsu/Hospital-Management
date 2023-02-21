@@ -1,0 +1,4 @@
+<apex:page standardController="Old_Patient__c">
+    <apex:detail />
+    
+</apex:page>
